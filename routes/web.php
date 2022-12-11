@@ -22,7 +22,23 @@ Route::get('/', function(){
 
 
 
+//Route::group(['namespace' => 'Post'], function () {
+//    Route::get('/posts', [\App\Http\Controllers\Post\IndexController::class])->name('post.index');
+//    Route::get('/posts/create', [\App\Http\Controllers\Post\CreateController::class])->name('post.create');
+//    Route::post('/posts', [\App\Http\Controllers\Post\StoreController::class])->name('post.store');
+//    Route::get('/posts/{post}', [\App\Http\Controllers\Post\ShowController::class])->name('post.show');
+//    Route::get('/posts/{post}/edit', [\App\Http\Controllers\Post\EditController::class])->name('post.edit');
+//    Route::patch('/posts/{post}', [\App\Http\Controllers\Post\UpdateController::class])->name('post.update');
+//    Route::delete('/posts/{post}', [\App\Http\Controllers\Post\DestroyController::class])->name('post.delete');
+//});
 
+//    Route::get('/posts', [\App\Http\Controllers\Post\IndexController::class, '__invoke'])->name('post.index');
+//    Route::get('/posts/create', [\App\Http\Controllers\Post\CreateController::class, '__invoke'])->name('post.create');
+//    Route::post('/posts', [\App\Http\Controllers\Post\StoreController::class, '__invoke'])->name('post.store');
+//    Route::get('/posts/{post}', [\App\Http\Controllers\Post\ShowController::class, '__invoke'])->name('post.show');
+//    Route::get('/posts/{post}/edit', [\App\Http\Controllers\Post\EditController::class, '__invoke'])->name('post.edit');
+//    Route::patch('/posts/{post}', [\App\Http\Controllers\Post\UpdateController::class, '__invoke'])->name('post.update');
+//    Route::delete('/posts/{post}', [\App\Http\Controllers\Post\DestroyController::class, '__invoke'])->name('post.delete');
 Route::get('/posts', [\App\Http\Controllers\PostController::class, 'index'])->name('post.index');
 Route::get('/posts/create', [\App\Http\Controllers\PostController::class, 'create'])->name('post.create');
 Route::post('/posts', [\App\Http\Controllers\PostController::class, 'store'])->name('post.store');
