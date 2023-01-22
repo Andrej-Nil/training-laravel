@@ -11,4 +11,8 @@
       </h3>
     </div>
   @endforeach
+
+  <div class="mt-5">
+    {{$posts->withQueryString()->links()}}
+  </div>
 @endsection
